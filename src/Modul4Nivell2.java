@@ -17,7 +17,7 @@ public class Modul4Nivell2 {
 		String eleccio;
 		int resp=1;
 		boolean verificacio=false;
-		
+		boolean busquedaPlat=false;
 		String[] menu = new String[2];
 		Integer[] preu = new Integer[2];
 		
@@ -65,29 +65,30 @@ public class Modul4Nivell2 {
 			
 			System.out.println("Introdueixi el nombre del plat que vol demanà:");
 			eleccio=sc3.nextLine();
-			System.out.println("plat demanat :"+ eleccio);
-			for(int i=0;i<menu.length-1;i++) 
+			
+			for(int i=0;i<=menu.length-1;i++) 
 			{
-				if (sc3.equals(menu[i])) 
+				
+				if (menu[i].equals(eleccio))
 				{
 					comanda.add(eleccio);
-				System.out.println("si existe"+i);
-				
+				    busquedaPlat=true;
 				}
 				
-				else {
-				System.out.println("no existe plat "+i);	
 				
-				
-				}
 			
+			}
+			 if(busquedaPlat==false) 
+			 {
+				 System.out.println("no existe plat ");	
 			}
 			
 			
+				
 			
 			System.out.println("Si vols demanar un altre plat marca el número 1, si vols acabar de demanar, marcael número 0");	
 			resp=sc4.nextInt();
-			 
+			 busquedaPlat=false;
 			}
 		sc.close();
 		sc1.close();
