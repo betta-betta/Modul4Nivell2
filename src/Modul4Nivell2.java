@@ -68,16 +68,16 @@ public class Modul4Nivell2 {
 			System.out.println("plat demanat :"+ eleccio);
 			for(int i=0;i<menu.length-1;i++) 
 			{
-				if (sc3==menu[i])) 
+				if (sc3.equals(menu[i])) 
 				{
 					comanda.add(eleccio);
-				System.out.println("si existe");
-				return true;
+				System.out.println("si existe"+i);
+				
 				}
 				
 				else {
-				System.out.println("no existe plat ");	
-				return false;
+				System.out.println("no existe plat "+i);	
+				
 				
 				}
 			
