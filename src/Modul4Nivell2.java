@@ -84,16 +84,32 @@ public class Modul4Nivell2 {
 			}
 			
 			
-				
+		do {
 			
+		
+			 try {
+			 
+			 
 			System.out.println("Si vols demanar un altre plat marca el número 1, si vols acabar de demanar, marcael número 0");	
 			resp=sc4.nextInt();
-			 busquedaPlat=false;
-			}
-		sc.close();
-		sc1.close();
-		sc3.close();
-		sc4.close();
+			
+			 verificacio=false;
+			 }
+					catch(InputMismatchException e) 
+					{
+						System.out.println(" Error,només espot possar ul número 1 o el númro 0");
+						sc4.next();
+						
+						verificacio=true;
+					
+					} 
+	              
+		  
+		}		
+			 while (verificacio==true);
+		 
+			 
+	   
 
 		
 		
@@ -112,12 +128,17 @@ public class Modul4Nivell2 {
 					trobat=true;
 					}
 				}		
-				if (trobat==false) {
+					if (trobat==false) 
+					{
 					System.out.println("El plat "+comanda.get(i)+" no existeix");
-				}
+					}
 		}	
 			System.out.println("El total de la conta són: "+total);
 			
 	}
-
+		 sc.close();
+			sc1.close();
+			sc3.close();
+			sc4.close();
+	}	
 }
