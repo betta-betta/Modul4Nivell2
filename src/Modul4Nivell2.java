@@ -90,7 +90,7 @@ public class Modul4Nivell2 {
 			 }
 					catch(InputMismatchException e) 
 					{
-						System.out.println(" Error,només espot possar ul número 1 o el númro 0");
+						System.out.println(" Error,només espot possar números");
 						sc4.next();
 						
 						verificacio=true;			
