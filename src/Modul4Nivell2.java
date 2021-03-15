@@ -1,5 +1,5 @@
 import java.util.ArrayList;
-import java.util.Arrays;
+
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
@@ -103,8 +103,7 @@ public class Modul4Nivell2 {
 
 		
 		
-		//System.out.println(comanda.size());
-		//System.out.println(menu.length);	
+		
 			for(int i=0;i<=comanda.size()-1;i++)
 		{    
 				boolean trobat= false;
