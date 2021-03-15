@@ -61,35 +61,28 @@ public class Modul4Nivell2 {
 		Scanner sc4=new Scanner(System.in);
 		ArrayList<String> comanda = new  ArrayList <String>();
 		System.out.println(" ");
-		while  (resp>=1) {
+		while  (resp==1) {
 			
 			System.out.println("Introdueixi el nombre del plat que vol demanà:");
 			eleccio=sc3.nextLine();
 			
-			for(int i=0;i<=menu.length-1;i++) 
-			{
-				
-				if (menu[i].equals(eleccio))
+			for(int i=0;i<menu.length-1;i++) 
+			{	
+				busquedaPlat=false;
+				if (menu[i].equalsIgnoreCase(eleccio))
 				{
 					comanda.add(eleccio);
-				    busquedaPlat=true;
-				}
-				
-				
-			
+					System.out.println("el plato existe ");
+					busquedaPlat=true;				    
+				}		
 			}
-			 if(busquedaPlat==false) 
+			
+			if(busquedaPlat==false) 
 			 {
 				 System.out.println("no existe plat ");	
-			}
-			
-			
+			}		
 		do {
-			
-		
-			 try {
-			 
-			 
+ 		   try {		 
 			System.out.println("Si vols demanar un altre plat marca el número 1, si vols acabar de demanar, marcael número 0");	
 			resp=sc4.nextInt();
 			
@@ -100,11 +93,8 @@ public class Modul4Nivell2 {
 						System.out.println(" Error,només espot possar ul número 1 o el númro 0");
 						sc4.next();
 						
-						verificacio=true;
-					
-					} 
-	              
-		  
+						verificacio=true;			
+				} 	  
 		}		
 			 while (verificacio==true);
 		 
@@ -133,10 +123,11 @@ public class Modul4Nivell2 {
 					System.out.println("El plat "+comanda.get(i)+" no existeix");
 					}
 		}	
-			System.out.println("El total de la conta són: "+total);
+			
 			
 	}
-		 sc.close();
+			System.out.println("El total de la conta són: "+total); 
+			sc.close();
 			sc1.close();
 			sc3.close();
 			sc4.close();
